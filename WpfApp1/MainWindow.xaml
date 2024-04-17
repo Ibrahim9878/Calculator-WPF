@@ -56,10 +56,14 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Button Name="ButtonFaiz" FontSize="30" Content="%" Grid.Row="0" Grid.Column="0" Background="Transparent" BorderBrush="Transparent"/>
-            <Button Name="ButtonCE" FontSize="30" Content="CE" Grid.Row="0" Grid.Column="1" Background="Transparent" BorderBrush="Transparent"/>
-            <Button Name="ButtonC" FontSize="30" Content="C" Grid.Row="0" Grid.Column="2" Background="Transparent" BorderBrush="Transparent"/>
-            <Image Source="icons/delete.png" Grid.Row="0" Grid.Column="3" Width="40"/>
+            <Button Name="ButtonFaiz" FontSize="30" Content="%" Grid.Row="0" Grid.Column="0" Background="White" BorderBrush="Gray"/>
+            <Button Name="ButtonCE" FontSize="30" Content="CE" Grid.Row="0" Grid.Column="1" Background="White" BorderBrush="Gray"/>
+            <Button Name="ButtonC" FontSize="30" Content="C" Grid.Row="0" Grid.Column="2" Background="White" BorderBrush="Gray"/>
+            <Button Name="ButtonBack" Grid.Row="0" Grid.Column="3" Width="50" Height="40" BorderBrush="Gray">
+                <Button.Background>
+                    <ImageBrush ImageSource="icons/delete.png"/>
+                </Button.Background>
+            </Button>
             <Button Name="Button1bol" FontSize="30" Content="1/x" Grid.Row="1" Grid.Column="0" Background="Transparent" BorderBrush="Transparent"/>
             <Button Name="ButtonKvadrat" FontSize="30" Content="x^2" Grid.Row="1" Grid.Column="1" Background="Transparent" BorderBrush="Transparent"/>
             <Button Name="ButtonKok" FontSize="30" Content="√x" Grid.Row="1" Grid.Column="2" Background="Transparent" BorderBrush="Transparent"/>
