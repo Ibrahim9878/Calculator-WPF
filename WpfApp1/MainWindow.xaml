@@ -13,7 +13,7 @@
             <RowDefinition Height="0.5*"/>
             <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
-        
+
         <Grid Grid.Row="0" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.5*"/>
@@ -24,7 +24,7 @@
             <Label Grid.Column="1" Content="Standart"  FontSize="25"/>
             <Image Grid.Column="2" Source="icons/history.png" Width="25" Height="25" VerticalAlignment="Center" HorizontalAlignment="Right" />
         </Grid>
-        <TextBlock Grid.Row="1" Text="0" FontSize="60" HorizontalAlignment="Right"/>
+        <Label Name="label" Content ="0" Grid.Row="1" FontSize="60" HorizontalAlignment="Right"/>
         <Grid Grid.Row="2" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -56,34 +56,34 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Button Name="ButtonFaiz" FontSize="30" Content="%" Grid.Row="0" Grid.Column="0" Background="White" BorderBrush="Gray"/>
-            <Button Name="ButtonCE" FontSize="30" Content="CE" Grid.Row="0" Grid.Column="1" Background="White" BorderBrush="Gray"/>
-            <Button Name="ButtonC" FontSize="30" Content="C" Grid.Row="0" Grid.Column="2" Background="White" BorderBrush="Gray"/>
-            <Button Name="ButtonBack" Grid.Row="0" Grid.Column="3" Width="50" Height="40" BorderBrush="Gray">
+            <Button Name="ButtonFaiz" FontSize="30" Content="%" Grid.Row="0" Grid.Column="0" Background="Transparent" BorderBrush="Gray"/>
+            <Button Name="ButtonCE" FontSize="30" Content="CE" Grid.Row="0" Grid.Column="1" Background="Transparent" BorderBrush="Gray" Click="ButtonCE_Click"/>
+            <Button Name="ButtonC" FontSize="30" Content="C" Grid.Row="0" Grid.Column="2" Background="Transparent" BorderBrush="Gray" Click="ButtonC_Click"/>
+            <Button Name="ButtonBack" Grid.Row="0" Grid.Column="3" Width="85" Height="43" BorderBrush="Gray" Click="ButtonBack_Click">
                 <Button.Background>
-                    <ImageBrush ImageSource="icons/delete.png"/>
+                    <ImageBrush ImageSource="icons/delete.png" Stretch="Uniform"/>
                 </Button.Background>
             </Button>
-            <Button Name="Button1bol" FontSize="30" Content="1/x" Grid.Row="1" Grid.Column="0" Background="Transparent" BorderBrush="Transparent"/>
-            <Button Name="ButtonKvadrat" FontSize="30" Content="x^2" Grid.Row="1" Grid.Column="1" Background="Transparent" BorderBrush="Transparent"/>
-            <Button Name="ButtonKok" FontSize="30" Content="√x" Grid.Row="1" Grid.Column="2" Background="Transparent" BorderBrush="Transparent"/>
-            <Button Name="ButtonBolme" FontSize="30" Content="/" Grid.Row="1" Grid.Column="3" Background="Transparent" BorderBrush="Transparent"/>
-            <Button Name="Button7" FontSize="30" Content="7" Grid.Row="2" Grid.Column="0" Background="Transparent" BorderBrush="Transparent"/>
-            <Button Name="Button8" FontSize="30" Content="8" Grid.Row="2" Grid.Column="1" Background="Transparent" BorderBrush="Transparent"/>
-            <Button Name="Button9" FontSize="30" Content="9" Grid.Row="2" Grid.Column="2" Background="Transparent" BorderBrush="Transparent"/>
-            <Button Name="ButtonPlus" FontSize="30" Content="+" Grid.Row="2" Grid.Column="3" Background="Transparent" BorderBrush="Transparent"/>
-            <Button Name="Button4" FontSize="30" Content="4" Grid.Row="3" Grid.Column="0" Background="Transparent" BorderBrush="Transparent"/>
-            <Button Name="Button5" FontSize="30" Content="5" Grid.Row="3" Grid.Column="1" Background="Transparent" BorderBrush="Transparent"/>
-            <Button Name="Button6" FontSize="30" Content="6" Grid.Row="3" Grid.Column="2" Background="Transparent" BorderBrush="Transparent"/>
-            <Button Name="ButtonMinus" FontSize="30" Content="-" Grid.Row="3" Grid.Column="3" Background="Transparent" BorderBrush="Transparent"/>
-            <Button Name="Button1" FontSize="30" Content="1" Grid.Row="4" Grid.Column="0" Background="Transparent" BorderBrush="Transparent"/>
-            <Button Name="Button2" FontSize="30" Content="2" Grid.Row="4" Grid.Column="1" Background="Transparent" BorderBrush="Transparent"/>
-            <Button Name="Button3" FontSize="30" Content="3" Grid.Row="4" Grid.Column="2" Background="Transparent" BorderBrush="Transparent"/>
-            <Button Name="ButtonMultiple" FontSize="30" Content="X" Grid.Row="4" Grid.Column="3" Background="Transparent" BorderBrush="Transparent"/>
-            <Button Name="ButtonPlusMinus" FontSize="30" Content="+/-" Grid.Row="5" Grid.Column="0" Background="Transparent" BorderBrush="Transparent"/>
-            <Button Name="Button0" FontSize="30" Content="0" Grid.Row="5" Grid.Column="1" Background="Transparent" BorderBrush="Transparent"/>
-            <Button Name="ButtonPoint" FontSize="30" Content="." Grid.Row="5" Grid.Column="2" Background="Transparent" BorderBrush="Transparent"/>
-            <Button Name="ButtonEqual" FontSize="30" Content="=" Grid.Row="5" Grid.Column="3" Background="Aquamarine" BorderBrush="Transparent"/>
+            <Button Name="Button1bol" FontSize="30" Content="1/x" Grid.Row="1" Grid.Column="0" Background="Transparent" BorderBrush="Gray"/>
+            <Button Name="ButtonKvadrat" FontSize="30" Content="x^2" Grid.Row="1" Grid.Column="1" Background="Transparent" BorderBrush="Gray"/>
+            <Button Name="ButtonKok" FontSize="30" Content="√x" Grid.Row="1" Grid.Column="2" Background="Transparent" BorderBrush="Gray" />
+            <Button Name="ButtonBolme" FontSize="30" Content="/" Grid.Row="1" Grid.Column="3" Background="Transparent" BorderBrush="Gray" Click="ButtonBolme_Click"/>
+            <Button Name="Button7" FontSize="30" Content="7" Grid.Row="2" Grid.Column="0" Background="Transparent" BorderBrush="Gray" Click="Button7_Click"/>
+            <Button Name="Button8" FontSize="30" Content="8" Grid.Row="2" Grid.Column="1" Background="Transparent" BorderBrush="Gray" Click="Button8_Click"/>
+            <Button Name="Button9" FontSize="30" Content="9" Grid.Row="2" Grid.Column="2" Background="Transparent" BorderBrush="Gray" Click="Button9_Click"/>
+            <Button Name="ButtonPlus" FontSize="30" Content="+" Grid.Row="2" Grid.Column="3" Background="Transparent" BorderBrush="Gray" Click="ButtonPlus_Click"/>
+            <Button Name="Button4" FontSize="30" Content="4" Grid.Row="3" Grid.Column="0" Background="Transparent" BorderBrush="Gray" Click="Button4_Click"/>
+            <Button Name="Button5" FontSize="30" Content="5" Grid.Row="3" Grid.Column="1" Background="Transparent" BorderBrush="Gray" Click="Button5_Click"/>
+            <Button Name="Button6" FontSize="30" Content="6" Grid.Row="3" Grid.Column="2" Background="Transparent" BorderBrush="Gray" Click="Button6_Click"/>
+            <Button Name="ButtonMinus" FontSize="30" Content="-" Grid.Row="3" Grid.Column="3" Background="Transparent" BorderBrush="Gray" Click="ButtonMinus_Click"/>
+            <Button Name="Button1" FontSize="30" Content="1" Grid.Row="4" Grid.Column="0" Background="Transparent" BorderBrush="Gray" Click="Button1_Click"/>
+            <Button Name="Button2" FontSize="30" Content="2" Grid.Row="4" Grid.Column="1" Background="Transparent" BorderBrush="Gray" Click="Button2_Click"/>
+            <Button Name="Button3" FontSize="30" Content="3" Grid.Row="4" Grid.Column="2" Background="Transparent" BorderBrush="Gray" Click="Button3_Click"/>
+            <Button Name="ButtonMultiple" FontSize="30" Content="X" Grid.Row="4" Grid.Column="3" Background="Transparent" BorderBrush="Gray" Click="ButtonMultiple_Click"/>
+            <Button Name="ButtonPlusMinus" FontSize="30" Content="+/-" Grid.Row="5" Grid.Column="0" Background="Transparent" BorderBrush="Gray"/>
+            <Button Name="Button0" FontSize="30" Content="0" Grid.Row="5" Grid.Column="1" Background="Transparent" BorderBrush="Gray" Click="Button0_Click"/>
+            <Button Name="ButtonPoint" FontSize="30" Content="." Grid.Row="5" Grid.Column="2" Background="Transparent" BorderBrush="Gray"/>
+            <Button Name="ButtonEqual" FontSize="30" Content="=" Grid.Row="5" Grid.Column="3" Background="Aquamarine" BorderBrush="Gray" Click="ButtonEqual_Click"/>
         </Grid>
     </Grid>
 </Window>
